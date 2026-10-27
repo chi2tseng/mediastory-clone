@@ -1,0 +1,673 @@
+/* ---------- 拍摄计划 / shot plan page, measured from the real site ---------- */
+
+.ms-plans-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #f4f6f7;
+  color: #24252c;
+}
+
+.ms-plans-head {
+  display: flex;
+  height: 80.33px;
+  padding: 19.992px 39.96px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+.ms-plans-headleft {
+  display: flex;
+  width: 480px;
+  height: 38.06px;
+  flex: none;
+  align-items: center;
+}
+.ms-plans-titlewrap {
+  display: flex;
+  height: 31.39px;
+  flex: none;
+  align-items: center;
+}
+.ms-plans-title {
+  margin: 0;
+  color: #24252c;
+  font-size: 19.992px;
+  font-weight: 600;
+  line-height: 31.4174px;
+  white-space: nowrap;
+}
+.ms-plans-help {
+  display: flex;
+  width: 19.98px;
+  height: 19.98px;
+  margin-left: 9.9996px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff2c7;
+  color: #fdca2f;
+  cursor: help;
+}
+.ms-plans-newbtn-wrap {
+  position: relative;
+  flex: none;
+}
+.ms-plans-newbtn {
+  display: flex;
+  height: 38.06px;
+  margin-left: 16px;
+  padding: 8.04px 19.992px;
+  box-sizing: border-box;
+  align-items: center;
+  border: 0;
+  border-radius: 14px;
+  background: #ffda71;
+  color: #24252c;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.001px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.ms-plans-newbtn:hover {
+  background: #ffd45a;
+}
+.ms-plans-newbtn span {
+  margin-left: 8px;
+}
+.ms-plans-tip {
+  position: absolute;
+  top: 44.06px;
+  left: 36px;
+  z-index: 8;
+  display: flex;
+  width: 324px;
+  height: 36px;
+  padding: 10px 5px 10px 15px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: #67626f;
+  color: #fff;
+  font-size: 13.9992px;
+  font-weight: 600;
+  line-height: 21.9997px;
+}
+.ms-plans-tip p {
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+}
+.ms-plans-tip-arrow {
+  position: absolute;
+  top: -5px;
+  left: 36px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #67626f;
+  border-left: 5px solid transparent;
+}
+.ms-plans-tip-close {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  flex: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.ms-plans-tip-close img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.ms-plans-headright {
+  display: flex;
+  width: 480px;
+  height: 40.36px;
+  flex: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ms-plans-settings-wrap {
+  position: relative;
+}
+.ms-plans-settings {
+  display: flex;
+  width: 131.98px;
+  height: 40.36px;
+  padding: 6px 20.0004px 2.4px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  background: #fff;
+  color: #24252c;
+  font-family: inherit;
+  font-size: 13.992px;
+  font-weight: 400;
+  line-height: 21.9884px;
+  cursor: pointer;
+}
+.ms-plans-settings:hover {
+  background: #fafafa;
+}
+.ms-plans-settings span {
+  margin: 6.606px 0 0 8px;
+  font-size: 14px;
+  line-height: 14px;
+  white-space: nowrap;
+}
+.ms-plans-settings-panel {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  z-index: 9;
+  width: 220px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+  font-size: 12px;
+}
+.ms-plans-settings-title {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.ms-plans-settings-panel label {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  color: #646464;
+}
+.ms-plans-settings-panel input {
+  accent-color: #ffda71;
+}
+
+.ms-plans-body {
+  display: flex;
+  height: calc(100vh - 130.33px);
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  overflow: auto;
+}
+.ms-plan-card {
+  display: flex;
+  width: 396px;
+  margin: 0 9.996px;
+  padding: 19.992px;
+  box-sizing: border-box;
+  flex: none;
+  flex-direction: column;
+  border-radius: 20px;
+  background: #fff;
+  transition: box-shadow 0.15s, background 0.15s;
+}
+.ms-plan-card.is-dragover {
+  background: #fffdf5;
+  box-shadow: inset 0 0 0 2px #ffda71;
+}
+.ms-plan-cardhead {
+  display: flex;
+  height: 25.14px;
+  flex: none;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.ms-plan-cardtitle {
+  display: flex;
+  height: 25.14px;
+  align-items: baseline;
+  color: #24252c;
+  font-size: 15.996px;
+  font-weight: 600;
+  line-height: 25.1377px;
+}
+.ms-plan-count {
+  margin-left: 9.996px;
+  color: #969696;
+  font-size: 15.996px;
+  font-weight: 400;
+  line-height: 25.1377px;
+}
+.ms-plan-subtitle {
+  margin-top: 2px;
+  color: #969696;
+  font-size: 11px;
+  line-height: 17px;
+}
+.ms-plan-listcontainer {
+  position: relative;
+  flex: none;
+}
+.ms-plan-list {
+  padding: 9.996px 0 12px;
+}
+.ms-plan-shot {
+  display: flex;
+  width: 100%;
+  height: 110px;
+  margin: 5px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: stretch;
+  border-radius: 20px;
+  background: #fff;
+  cursor: grab;
+}
+.ms-plan-shot:hover {
+  background: #fafafa;
+}
+.ms-plan-shot:active {
+  cursor: grabbing;
+}
+.ms-plan-shot.is-selected {
+  background: #fffdf3;
+}
+.ms-plan-radio-col {
+  display: flex;
+  width: 29.984px;
+  height: 90px;
+  padding-right: 9.9996px;
+  box-sizing: border-box;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ms-plan-radio {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #24252c;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.ms-plan-radio span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #24252c;
+}
+.ms-plan-image-wrap {
+  display: flex;
+  width: 171.953px;
+  height: 90px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+}
+.ms-plan-image {
+  position: relative;
+  display: flex;
+  width: 159.953px;
+  height: 90px;
+  margin-right: 12px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+.ms-plan-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ms-plan-image-empty {
+  color: #969696;
+  font-size: 15.996px;
+  font-weight: 600;
+  line-height: 25.1377px;
+  white-space: nowrap;
+}
+.ms-plan-content {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ms-plan-shotno {
+  color: #646464;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18.858px;
+}
+.ms-plan-shotcontent {
+  overflow: hidden;
+  color: #646464;
+  font-size: 13.9992px;
+  font-weight: 600;
+  line-height: 21.9997px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ms-plan-shotscene {
+  overflow: hidden;
+  color: #646464;
+  font-size: 9.9996px;
+  font-weight: 300;
+  line-height: 15.7144px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ms-plan-empty {
+  display: flex;
+  height: 90px;
+  margin: 5px 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #e3e4e9;
+  border-radius: 20px;
+  color: #b9bbc4;
+  font-size: 12px;
+}
+.ms-plan-menu-wrap {
+  position: relative;
+  flex: none;
+}
+.ms-plan-menu-btn {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #969696;
+  cursor: pointer;
+}
+.ms-plan-menu-btn:hover {
+  background: #f4f6f7;
+  color: #24252c;
+}
+.ms-plan-menu {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  z-index: 10;
+  width: 112px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14);
+}
+.ms-plan-menu button {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #24252c;
+  font-family: inherit;
+  font-size: 12px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.ms-plan-menu button:hover {
+  background: #f4f6f7;
+}
+.ms-plan-menu button.is-danger {
+  color: #d84a4a;
+}
+.ms-plan-addcard {
+  display: flex;
+  width: 396px;
+  height: 207px;
+  margin: 0 9.996px;
+  padding: 20px;
+  box-sizing: border-box;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed #d8d8d8;
+  border-radius: 20px;
+  background: transparent;
+  color: #969696;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ms-plan-addcard:hover {
+  border-color: #ffda71;
+  background: #fff;
+  color: #24252c;
+}
+
+.ms-plans-selection {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  z-index: 35;
+  display: flex;
+  height: 44px;
+  padding: 0 8px 0 18px;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 8px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+  color: #24252c;
+  font-size: 12px;
+  transform: translateX(-50%);
+}
+.ms-plans-selection button {
+  height: 30px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #ffda71;
+  color: #a2662a;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ms-plans-selection button.is-ghost {
+  background: #f4f6f7;
+  color: #646464;
+}
+
+/* create / edit plan modal */
+.ms-plan-modal-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+.ms-plan-modal {
+  width: 520px;
+  padding: 22px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  color: #24252c;
+}
+.ms-plan-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ms-plan-modal-head h2 {
+  margin: 0;
+  font-size: 19.992px;
+  font-weight: 500;
+  line-height: 31.4174px;
+}
+.ms-plan-modal-close {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #24252c;
+  cursor: pointer;
+}
+.ms-plan-modal-close:hover {
+  background: #f4f6f7;
+}
+.ms-plan-modal-body {
+  display: flex;
+  margin-top: 14px;
+  flex-direction: column;
+  gap: 14px;
+}
+.ms-plan-modal-body label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #646464;
+  font-size: 12px;
+}
+.ms-plan-modal-body input,
+.ms-plan-modal-body textarea {
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 8px;
+  outline: 0;
+  background: #f4f6f7;
+  color: #24252c;
+  font-family: inherit;
+  font-size: 14px;
+  resize: none;
+}
+.ms-plan-modal-body textarea {
+  height: auto;
+  padding: 9px 12px;
+  line-height: 21px;
+}
+.ms-plan-modal-body input:focus,
+.ms-plan-modal-body textarea:focus {
+  box-shadow: inset 0 0 0 1px #ffda71;
+}
+.ms-plan-modal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.ms-plan-modal-foot {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.ms-plan-modal-foot button {
+  height: 38px;
+  min-width: 96px;
+  padding: 0 18px;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  background: #fff;
+  color: #24252c;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ms-plan-modal-foot button.is-primary {
+  border-color: #ffda71;
+  background: #ffda71;
+  color: #a2662a;
+}
+.ms-plan-modal-foot button.is-danger {
+  border-color: #e05252;
+  background: #e05252;
+  color: #fff;
+}
+.ms-plan-confirm {
+  width: 400px;
+  padding: 22px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  color: #24252c;
+}
+.ms-plan-confirm h2 {
+  margin: 0;
+  font-size: 19.992px;
+  font-weight: 500;
+  line-height: 31.4174px;
+}
+.ms-plan-confirm p {
+  margin: 10px 0 0;
+  color: #646464;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+@media (max-width: 900px) {
+  .ms-plans-page {
+    width: 100%;
+    padding-right: 0;
+  }
+  .ms-plans-head {
+    height: auto;
+    padding: 14px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .ms-plans-headleft,
+  .ms-plans-headright {
+    width: auto;
+    height: auto;
+  }
+  .ms-plans-title {
+    font-size: 18px;
+  }
+  .ms-plans-tip {
+    display: none;
+  }
+  .ms-plans-body {
+    height: auto;
+    max-height: calc(100vh - 130px);
+    padding: 0 10px 26px;
+    flex-wrap: wrap;
+  }
+  .ms-plan-card,
+  .ms-plan-addcard {
+    width: calc(100vw - 40px);
+    margin: 0 auto 12px;
+  }
+  .ms-plan-modal,
+  .ms-plan-confirm {
+    width: calc(100vw - 32px);
+  }
+}

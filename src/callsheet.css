@@ -1,0 +1,150 @@
+/* ---------- 拍摄通告 / callsheet paywall, measured from the real site ---------- */
+
+.ms-callsheet-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: #24252c;
+}
+
+.ms-callsheet-head {
+  display: flex;
+  width: 100%;
+  height: 71.36px;
+  padding-left: 39.95px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.ms-callsheet-title {
+  margin: 0;
+  color: #24252c;
+  font-size: 19.992px;
+  font-weight: 600;
+  line-height: 31.4174px;
+  white-space: nowrap;
+}
+.ms-callsheet-help {
+  display: flex;
+  width: 19.98px;
+  height: 19.98px;
+  margin-left: 9.9996px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff2c7;
+  color: #fdca2f;
+  cursor: help;
+}
+
+.ms-callsheet-stage {
+  position: relative;
+  width: calc(100% - 15px);
+  height: calc(100% - 71.36px);
+  overflow: hidden;
+}
+.ms-callsheet-art {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  z-index: 0;
+  width: 1031.46875px;
+  height: 760px;
+  transform: translateX(-50%);
+}
+.ms-callsheet-bg {
+  display: block;
+  width: 1031.46875px;
+  height: 760px;
+  object-fit: fill;
+  user-select: none;
+}
+.ms-callsheet-wash {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+.ms-callsheet-lockwrap {
+  position: absolute;
+  top: 257.72px;
+  left: 50%;
+  z-index: 2;
+  width: 324px;
+  height: 313.1875px;
+  transform: translateX(-50%);
+}
+.ms-callsheet-lock {
+  display: block;
+  width: 324px;
+  height: 313.1875px;
+  object-fit: fill;
+  user-select: none;
+}
+.ms-callsheet-buy {
+  position: absolute;
+  top: 212.76px;
+  left: 64.8px;
+  width: 194.4px;
+  height: 43.74px;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  cursor: pointer;
+}
+.ms-callsheet-buy:focus-visible {
+  outline: 2px solid #ffda71;
+  outline-offset: 2px;
+}
+
+.ms-callsheet-project {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .ms-callsheet-head {
+    height: 62px;
+    padding-left: 18px;
+  }
+  .ms-callsheet-title {
+    font-size: 18px;
+  }
+  .ms-callsheet-stage {
+    width: 100%;
+    height: calc(100% - 62px);
+  }
+  .ms-callsheet-art {
+    top: 18px;
+    width: 100%;
+    height: auto;
+  }
+  .ms-callsheet-bg {
+    width: 100%;
+    height: auto;
+  }
+  .ms-callsheet-lockwrap {
+    top: 22vw;
+    width: 58vw;
+    max-width: 324px;
+    height: auto;
+  }
+  .ms-callsheet-lock {
+    width: 100%;
+    height: auto;
+  }
+  .ms-callsheet-buy {
+    top: 65.7%;
+    left: 20%;
+    width: 60%;
+    height: 14%;
+  }
+}
