@@ -291,7 +291,7 @@
 .ms-share-search {
   flex: 1;
   min-width: 0;
-  padding: 1px 20.004px 0 12px;
+  padding: 1px 20.004px 20.01px 12px;
   box-sizing: border-box;
 }
 .ms-share-searchinner {
