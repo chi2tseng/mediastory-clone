@@ -514,14 +514,14 @@
   font-family: 'MS PDF Sans';
   font-style: normal;
   font-weight: 400;
-  font-display: block;
+  font-display: swap;
   src: url('/fonts/SourceHanSansSC-Regular.otf') format('opentype');
 }
 @font-face {
   font-family: 'MS PDF Sans';
   font-style: normal;
   font-weight: 500;
-  font-display: block;
+  font-display: swap;
   src: url('/fonts/SourceHanSansSC-Medium.otf') format('opentype');
 }
 .ms-pdf-page {
